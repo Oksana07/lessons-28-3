@@ -1,0 +1,75 @@
+
+.box {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: tomato;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+  /*  Set transition values  */
+  /* transition-property: background-color, transform;
+  transition-duration: 1500ms;
+  transition-timing-function: linear;
+  transition-delay: 0; */
+
+  /* transition: background-color, transform, 1500ms, linear, 0; */
+
+/* animation: animateX50Y100 3000ms linear 0ms; */
+  background-color: palevioletred;
+}
+
+.box:hover {
+background-color: teal;
+animation: animateX50Y100 3000ms linear 0ms;
+}
+
+/* .box-2{
+position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 400px;
+  height: 400px;
+  background-color: black;
+  background-image: url(https://img-fotki.yandex.ru/get/3111/5091629.a2/0_85f54_7fb379e6_orig),
+    linear-gradient(45deg, white 50%, transparent 50%),
+    linear-gradient(-45deg, white 50%, transparent 50%);
+  background-repeat: no-repeat, repeat, repeat;
+  background-position:
+    50% -15%,
+    50% 50%,
+    50% 50%;
+  background-blend-mode: difference;
+  background-size: auto, 5em 5em, 5em 5em;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px #FFF;
+  animation: move 1.68s infinite ease-out;
+}
+
+@keyframes move {
+  50% {
+    background-position:
+      50% 95%,
+      50% 50%,
+      50% 50%;
+  }
+} */
+
+
+
+@keyframes animateX50Y100 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-50px, -100px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}

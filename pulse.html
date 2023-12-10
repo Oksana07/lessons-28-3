@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>перспектива пульс</title>
+  <style>
+    .pulse {
+      width: 100px;
+      height: 100px;
+      background-color: #ea2a2a;
+      border-radius: 50%;
+      margin: 50px;
+
+      animation: pulseAnimation 1s ease-in-out infinite;
+    }
+
+    @keyframes pulseAnimation {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.2);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <a href="./index.html">головна</a>
+  <div class="pulse"></div>
+</body>
+
+</html>

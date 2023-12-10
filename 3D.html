@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Анімація за допомогою Three.js</title>
+  <script src="https://threejs.org/build/three.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="./index.html">головна</a>
+  <script>
+    // Створення сцени
+    var scene = new THREE.Scene();
+
+    // Створення камери
+    var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.z = 5;
+
+    // Створення рендерера
+    var renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    // Створення геометрії та матеріалу для куба
+    var geometry = new THREE.BoxGeometry();
+    var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+
+    // Створення куба та додавання його до сцени
+    var cube = new THREE.Mesh(geometry, material);
+    scene.add(cube);
+
+    // Функція для анімації
+    function animate() {
+      requestAnimationFrame(animate);
+
+      // Обертання куба
+      cube.rotation.x += 0.01;
+      cube.rotation.y += 0.01;
+
+      renderer.render(scene, camera);
+    }
+
+    // Виклик функції animate
+    animate();
+  </script>
+</body>
+
+</html>

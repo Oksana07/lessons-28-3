@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .square {
+      width: 50px;
+      height: 50px;
+      background-color: #3498db;
+      position: absolute;
+      animation: moveSquare 10s linear infinite alternate;
+    }
+
+    @keyframes moveSquare {
+      to {
+        transform: translateX(100vw);
+      }
+    }
+  </style>
+  <title>2D Анімація на CSS</title>
+</head>
+
+<body>
+  <a href="./index.html">головна</a>
+  <div class="square"></div>
+</body>
+
+</html>
